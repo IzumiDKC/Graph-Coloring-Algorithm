@@ -7,11 +7,11 @@
 **Hàm DoThi**:
 Hàm này đảm nhiệm việc đọc ma trận đồ thị từ một tệp tin và lưu nó vào mảng a.
 
-f=fopen("MATRAN.inp","r");: Mở tệp "MATRAN.inp" trong chế độ đọc.
+`f=fopen("MATRAN.inp","r");`: Mở tệp "MATRAN.inp" trong chế độ đọc.
 
-if(!f) {printf("\nLoi mo file"); getch(); return 0;}: Nếu không thể mở tệp, in thông báo lỗi, dừng chương trình và trả về 0.
+`if(!f) {printf("\nLoi mo file"); getch(); return 0;}`: Nếu không thể mở tệp, in thông báo lỗi, dừng chương trình và trả về 0.
 
-fscanf(f,"%d",&n);: Đọc số đỉnh của đồ thị từ tệp.
+`fscanf(f,"%d",&n);`: Đọc số đỉnh của đồ thị từ tệp.
 
 Sử dụng hai vòng lặp lồng nhau để đọc các giá trị trong ma trận đồ thị và lưu vào mảng a.
 
