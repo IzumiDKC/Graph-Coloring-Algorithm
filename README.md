@@ -1,33 +1,28 @@
-# Graph-Coloring-Algorithm
+This is a C++ program to color the vertices of an undirected graph.
 
-## Thuật toán tô màu đồ thị
+Function DoThi:
+This function is responsible for reading the graph matrix from a file and storing it in array a.
 
-Đây là một chương trình C++ để tô màu các đỉnh của một đồ thị vô hướng
+f=fopen("MATRAN.inp","r");: Open the file "MATRAN.inp" in read mode.
 
-**Hàm DoThi**:
-Hàm này đảm nhiệm việc đọc ma trận đồ thị từ một tệp tin và lưu nó vào mảng a.
+if(!f) {printf("\nLoi mo file"); getch(); return 0;}: If the file cannot be opened, print an error message, stop the program, and return 0.
 
-`f=fopen("MATRAN.inp","r");`: Mở tệp "MATRAN.inp" trong chế độ đọc.
+fscanf(f,"%d",&n);: Read the number of vertices of the graph from the file.
 
-`if(!f) {printf("\nLoi mo file"); getch(); return 0;}`: Nếu không thể mở tệp, in thông báo lỗi, dừng chương trình và trả về 0.
+Use two nested loops to read the values in the graph matrix and store them in array a.
 
-`fscanf(f,"%d",&n);`: Đọc số đỉnh của đồ thị từ tệp.
+Function Bac: Function to calculate the degree of vertices in the graph, allocate an array d to store the degree of each vertex. Use two loops to calculate the sum of elements on each row of matrix a and store it in array d.
 
-Sử dụng hai vòng lặp lồng nhau để đọc các giá trị trong ma trận đồ thị và lưu vào mảng a.
+Function swap: This function simply swaps the values of two integer variables.
 
-**Hàm Bac**: Hàm tính bậc của các đỉnh trong đồ thị, cấp phát một mảng d chứa bậc của từng đỉnh. Sử dụng hai vòng lặp để tính tổng các phần tử trên mỗi dòng của ma trận a và lưu vào mảng d.
+Function Arr: This function sorts the vertices in decreasing order of degree. Use the id array to remember the initial positions of the vertices. Use the bubble sort algorithm to sort the array d (degree) along with swapping elements in the id array.
 
-**Hàm swap**: Hàm này đơn giản là hoán đổi giá trị của hai biến nguyên.
+Function tomau: This function performs the graph coloring algorithm, allocates array m to store the coloring result for each vertex. Call the Bac function to calculate the degrees of vertices and the Arr function to sort the vertices by decreasing degree.
+Use array m to assign colors to each vertex so that adjacent vertices do not have the same color, print the result of the number of colors needed, and classify vertices by color.
 
-**Hàm Arr**: Hàm này sắp xếp các đỉnh theo thứ tự giảm dần của bậc. Sử dụng mảng id để ghi nhớ vị trí ban đầu của các đỉnh.
-Sử dụng thuật toán sắp xếp nổi bọt để sắp xếp mảng d (bậc) cùng với việc đổi chỗ các phần tử trong mảng id.
+Function main: The main function of the program.
+Declare variables for the number of vertices n and the graph matrix a.
+Call the DoThi function to read data from the file into n and a.
+Call the tomau function to color the graph.
 
-**Hàm tomau**: Hàm này thực hiện thuật toán tô màu đồ thị, cấp phát mảng m để lưu kết quả tô màu cho từng đỉnh. Gọi hàm Bac để tính bậc của các đỉnh và hàm Arr để sắp xếp các đỉnh theo bậc giảm dần.
-Sử dụng mảng m để gán các màu cho từng đỉnh sao cho hai đỉnh kề nhau không có cùng màu, in kết quả số màu cần sử dụng và phân loại đỉnh theo màu.
-
-**Hàm main**: Hàm chính của chương trình.
-Khai báo biến số đỉnh n và ma trận đồ thị a.
-Gọi hàm DoThi để đọc dữ liệu từ tệp vào n và a.
-Gọi hàm tomau để tô màu đồ thị.
-
-*Tóm lại, chương trình này đọc ma trận đồ thị từ tệp, tính toán bậc của các đỉnh, sắp xếp đỉnh theo bậc giảm dần và thực hiện thuật toán tô màu để đảm bảo các đỉnh kề nhau không cùng màu. Kết quả là in ra số màu cần sử dụng và phân loại các đỉnh theo màu.*
+In summary, this program reads the graph matrix from a file, calculates the degrees of vertices, sorts vertices by decreasing degree, and performs a graph coloring algorithm to ensure that adjacent vertices do not have the same color. The result is to print out the number of colors needed and classify vertices by color.
