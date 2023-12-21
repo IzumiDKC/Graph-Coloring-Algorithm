@@ -27,4 +27,4 @@ Declare variables for the number of vertices n and the graph matrix a.
 Call the DoThi function to read data from the file into n and a.
 Call the tomau function to color the graph.
 
-In summary, this program reads the graph matrix from a file, calculates the degrees of vertices, sorts vertices by decreasing degree, and performs a graph coloring algorithm to ensure that adjacent vertices do not have the same color. The result is to print out the number of colors needed and classify vertices by color.
+*In summary, this program reads the graph matrix from a file, calculates the degrees of vertices, sorts vertices by decreasing degree, and performs a graph coloring algorithm to ensure that adjacent vertices do not have the same color. The result is to print out the number of colors needed and classify vertices by color.*
