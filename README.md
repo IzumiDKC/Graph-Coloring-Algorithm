@@ -1,4 +1,6 @@
-This is a C++ program to color the vertices of an undirected graph.
+#Graph-Coloring-Algorithm
+
+##This is a C++ program to color the vertices of an undirected graph.
 
 Function DoThi:
 This function is responsible for reading the graph matrix from a file and storing it in array a.
