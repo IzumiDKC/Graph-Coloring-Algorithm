@@ -1,4 +1,4 @@
-#Graph-Coloring-Algorithm
+# Graph-Coloring-Algorithm
 
 ##This is a C++ program to color the vertices of an undirected graph.
 
